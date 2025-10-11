@@ -13,7 +13,9 @@ const config: Config = {
       transitionProperty: {
         width: "width",
       },
-      fontFamily: {},
+      fontFamily: {
+        urw: ["var(--font-urw)", "sans-serif"],
+      },
       screens: {
         "2sm": "481px",
         "max-2sm": { raw: "(max-width: 480px)" },

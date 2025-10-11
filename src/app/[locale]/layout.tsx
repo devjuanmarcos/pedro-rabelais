@@ -3,7 +3,14 @@ import type { Metadata } from "next";
 import CombinedHeader from "@/components/header/CombinedHeader";
 import Providers from "@/components/layout/providers";
 import { Footer } from "@/components/footer/footer";
-import { GeistSans } from "geist/font/sans";
+import localFont from "next/font/local";
+
+// Definindo a fonte URW Geometric como fonte principal
+const urwFont = localFont({
+  src: "./URWGeometricRegular.otf",
+  variable: "--font-urw",
+  display: "swap",
+});
 import { Toaster } from "sonner";
 import { getMessages } from "next-intl/server";
 
@@ -60,9 +67,9 @@ export default async function RootLayout({
   const messages = await getMessages(resolvedParams.locale as any);
 
   return (
-    <html className={`${GeistSans.variable}`} suppressHydrationWarning lang="pt-BR">
+    <html className={`${urwFont.variable} font-urw`} suppressHydrationWarning lang="pt-BR">
       {/* <Script defer data-domain="biomob.org" src="https://plausible.biomob.app/js/script.js" /> */}
-      <body className={""}>
+      <body className={"font-urw"}>
         <Providers messages={messages} locale={resolvedParams.locale}>
           <CombinedHeader locale={resolvedParams.locale} />
           {children}

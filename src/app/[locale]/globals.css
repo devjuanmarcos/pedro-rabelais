@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  /* Definindo a fonte URW como padrão para todo o sistema */
+  html {
+    font-family: var(--font-urw), sans-serif;
+  }
+
   * {
     --brand-primary-dark: 358, 83%, 33%;
     --brand-primary-mid: 358, 77%, 49%;
