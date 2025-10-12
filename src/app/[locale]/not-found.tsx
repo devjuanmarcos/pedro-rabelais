@@ -1,6 +1,5 @@
 import PageContainer from "@/components/layout/page-container";
 import { buttonVariants } from "@/components/ui/button";
-import { Footer } from "@/components/footer/footer";
 import { AlertTriangle } from "lucide-react";
 import Link from "next/link";
 
@@ -20,7 +19,6 @@ export default async function NotFoundPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </PageContainer>
   );
 }

@@ -3,6 +3,7 @@ import React from "react";
 
 import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
 
 export function FocusCardsDemo() {
   const cards = [
@@ -43,16 +44,67 @@ export function FocusCardsDemo() {
 
 export const ProjectsPage = () => {
   return (
-    <div className="flex flex-col gap-48 justify-center items-center py-48 px-12">
-      <div className="flex flex-col justify-center items-center gap-2 text-center">
-        <h1 className="display-01">Nossos mais recentes projetos</h1>
-        <span>
-          Atuamos em projetos residenciais, comerciais e institucionais, oferecendo soluções que atendem a diferentes
-          ambientes e demandas em diversas regiões do país.
-        </span>
-        <Button className="mt-2">Quero entrar em contato</Button>
+    <div className="flex flex-col px-4 ">
+      <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+        <div className="px-4 py-10 md:py-20">
+          <h1 className="relative z-10 mx-auto max-w-4xl text-center display-01 ">
+            {"Nossos mais recentes projetos".split(" ").map((word, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.1,
+                  ease: "easeInOut",
+                }}
+                className="mr-2 inline-block"
+              >
+                {word}
+              </motion.span>
+            ))}
+          </h1>
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 0.8,
+            }}
+            className="relative z-10 mx-auto  py-4 text-center body-paragraph"
+          >
+            Atuamos em projetos residenciais, comerciais e institucionais, oferecendo soluções que atendem a diferentes
+            ambientes e demandas em diversas regiões do país.
+          </motion.p>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 1,
+            }}
+            className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
+          >
+            <Button>Quero entrar em contato</Button>
+          </motion.div>
+        </div>
       </div>
-      <FocusCardsDemo />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        className="w-full mb-20"
+      >
+        <FocusCardsDemo />
+      </motion.div>
     </div>
   );
 };

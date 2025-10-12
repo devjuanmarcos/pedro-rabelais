@@ -27,19 +27,19 @@ export const Footer = () => {
       </div>
 
       <div className="flex gap-12">
-        <Link href="https://www.instagram.com/biomobguia/" target="_blank">
+        <Link href="https://www.instagram.com/PedroRabelaisguia/" target="_blank">
           <IoLogoInstagram className="text-lg text-primary-foreground" />
         </Link>
 
-        <Link href="https://www.linkedin.com/company/biomob/" target="_blank">
+        <Link href="https://www.linkedin.com/company/PedroRabelais/" target="_blank">
           <FaLinkedinIn className="text-lg text-primary-foreground" />
         </Link>
 
-        <Link href="https://pt-br.facebook.com/biomobguia/" target="_blank">
+        <Link href="https://pt-br.facebook.com/PedroRabelaisguia/" target="_blank">
           <FaFacebookF className="text-lg text-primary-foreground" />
         </Link>
 
-        <Link href="https://www.youtube.com/@biomobguia" target="_blank">
+        <Link href="https://www.youtube.com/@PedroRabelaisguia" target="_blank">
           <FaYoutube className="text-lg text-primary-foreground" />
         </Link>
       </div>

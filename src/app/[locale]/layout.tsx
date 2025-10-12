@@ -14,10 +14,10 @@ const urwFont = localFont({
 import { Toaster } from "sonner";
 import { getMessages } from "next-intl/server";
 
-const APP_NAME = "Biomob";
-const APP_DEFAULT_TITLE = "Biomob";
+const APP_NAME = "PedroRabelais";
+const APP_DEFAULT_TITLE = "PedroRabelais";
 const APP_TITLE_TEMPLATE = "%s";
-const APP_DESCRIPTION = "Biomob!";
+const APP_DESCRIPTION = "PedroRabelais!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"),
@@ -68,7 +68,7 @@ export default async function RootLayout({
 
   return (
     <html className={`${urwFont.variable} font-urw`} suppressHydrationWarning lang="pt-BR">
-      {/* <Script defer data-domain="biomob.org" src="https://plausible.biomob.app/js/script.js" /> */}
+      {/* <Script defer data-domain="PedroRabelais.org" src="https://plausible.PedroRabelais.app/js/script.js" /> */}
       <body className={"font-urw"}>
         <Providers messages={messages} locale={resolvedParams.locale}>
           <CombinedHeader locale={resolvedParams.locale} />

@@ -102,7 +102,7 @@ export const Header = ({ href = "/" }: HeaderProps) => {
 
             <MenubarMenu>
               <MenubarTrigger>
-                <Link className="" href="/instituto-biomob">
+                <Link className="" href="/instituto-PedroRabelais">
                   <span className="h2-semibold text-[1.125rem]">Instituto</span>
                 </Link>
               </MenubarTrigger>
@@ -162,7 +162,7 @@ export const Header = ({ href = "/" }: HeaderProps) => {
               Notícias
             </Link>
 
-            <Link onClick={toggleSidebar} className="h2-semibold text-[1.125rem]" href="/instituto-biomob">
+            <Link onClick={toggleSidebar} className="h2-semibold text-[1.125rem]" href="/instituto-PedroRabelais">
               Instituto
             </Link>
           </nav>

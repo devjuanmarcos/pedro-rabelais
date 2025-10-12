@@ -62,29 +62,31 @@ export const BarTools = () => {
         </div>
         <div className="flex items-center justify-center h-[1.925rem] px-2 gap-x-4">
           <div className="flex items-center justify-center h-[1.925rem] px-2 gap-x-4">
-            <button onClick={() => openInNewTab("https://www.instagram.com/biomobguia/")}>
+            <button onClick={() => openInNewTab("https://www.instagram.com/PedroRabelaisguia/")}>
               <IoLogoInstagram className="text-lg text-text-verde-medio" />
             </button>
-            <button onClick={() => openInNewTab("https://www.linkedin.com/company/biomob/")}>
+            <button onClick={() => openInNewTab("https://www.linkedin.com/company/PedroRabelais/")}>
               <FaLinkedinIn className="text-lg text-text-verde-medio" />
             </button>
-            <button onClick={() => openInNewTab("https://pt-br.facebook.com/biomobguia/")}>
+            <button onClick={() => openInNewTab("https://pt-br.facebook.com/PedroRabelaisguia/")}>
               <FaFacebookF className="text-lg text-text-verde-medio" />
             </button>
             <button onClick={() => openInNewTab("https://google.com.br/")}>
               <FaXTwitter className="text-lg text-text-verde-medio" />
             </button>
-            <button onClick={() => openInNewTab("https://www.youtube.com/@biomobguia")}>
+            <button onClick={() => openInNewTab("https://www.youtube.com/@PedroRabelaisguia")}>
               <FaYoutube className="text-lg text-text-verde-medio" />
             </button>
             <p className="max-sm:hidden text-lg text-text-verde-medio">|</p>
             <p className="max-sm:hidden t1 roboto-font text-text-verde-medio">Baixe o app</p>
           </div>
           <div className="max-sm:hidden flex items-center justify-center h-[1.925rem] px-2 gap-x-4">
-            <button onClick={() => openInNewTab("https://apps.apple.com/br/app/biomob/id1090156739")}>
+            <button onClick={() => openInNewTab("https://apps.apple.com/br/app/PedroRabelais/id1090156739")}>
               <FaApple className="text-lg text-text-verde-medio" />
             </button>
-            <button onClick={() => openInNewTab("https://play.google.com/store/apps/details?id=com.biomob.bioplus")}>
+            <button
+              onClick={() => openInNewTab("https://play.google.com/store/apps/details?id=com.PedroRabelais.bioplus")}
+            >
               <FaGooglePlay className="text-lg text-text-verde-medio" />
             </button>
           </div>

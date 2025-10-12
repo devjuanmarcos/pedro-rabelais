@@ -1,43 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import createMiddleware from "next-intl/middleware";
 
-const locales = [
-  "zh-Hant",
-  "zh-Hans",
-  "en",
-  "pt",
-  "es",
-  "ja",
-  "de",
-  "fr",
-  "it",
-  "bn",
-  "hi",
-  "ru",
-  "ko",
-  "vi",
-  "te",
-  "yue",
-  "mr",
-  "ta",
-  "tr",
-  "ur",
-  "gu",
-  "pl",
-  "uk",
-  "ms",
-  "kn",
-  "or",
-  "pa",
-  "ro",
-  "az",
-  "fa",
-  "my",
-  "th",
-  "nl",
-  "yo",
-  "sd",
-];
+const locales = ["pt"];
 
 const defaultLocale = "pt";
 

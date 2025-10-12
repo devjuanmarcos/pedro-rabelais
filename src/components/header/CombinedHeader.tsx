@@ -4,9 +4,8 @@ import React from "react";
 import SwitchWithIcon from "../ui/switchWithIcon";
 import Image from "next/image";
 import BarToolsSkeleton from "../ui/BarToolsSkeleton";
-import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
   const [dropdownVisible, setDropdownVisible] = React.useState(false);
@@ -15,7 +14,6 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
   const sidebarRef = React.useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = React.useState<boolean>(false);
   const { theme } = useTheme();
-  const t = useTranslations("Header");
 
   React.useEffect(() => {
     setIsMounted(true);
@@ -37,31 +35,27 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
     };
   }, [dropdownVisible, sidebarOpen]);
 
-  function ativarVLibras() {
-    const vlibrasButton = document.querySelector('[vw-access-button="true"]') as HTMLElement;
-
-    if (vlibrasButton) {
-      vlibrasButton.click();
-    }
-  }
-
   if (!isMounted) {
     return <BarToolsSkeleton />;
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50  flex flex-col bg-background">
-      <div className="flex gap-4 justify-between w-full items-center px-4 py-2">
-        <Image
-          src={"/img/logo-principal-preta-horizontal.png"}
-          alt={t("logo")}
-          aria-label={t("logo")}
-          sizes="100vw"
-          width={137}
-          height={58}
-        />
+    <header className="fixed top-0 left-0 right-0 z-50 flex flex-col bg-background">
+      <div className="relative flex items-center w-full px-4 py-2">
+        <div className="absolute left-4">
+          <Image
+            src={
+              theme == "dark" ? "/img/logo-principal-branca-horizontal.png" : "/img/logo-principal-preta-horizontal.png"
+            }
+            alt={"Logo Pedro Rabelais"}
+            aria-label={"Logo Pedro Rabelais"}
+            sizes="100vw"
+            width={137}
+            height={58}
+          />
+        </div>
 
-        <div className="flex justify-center items-center gap-4 w-full">
+        <div className="flex justify-center items-center gap-4 w-full mx-auto">
           <Link href={"/"} className="body-callout-medium">
             Início
           </Link>
@@ -83,7 +77,9 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
           </Link>
         </div>
 
-        <SwitchWithIcon />
+        <div className="absolute right-4">
+          <SwitchWithIcon />
+        </div>
       </div>
     </header>
   );

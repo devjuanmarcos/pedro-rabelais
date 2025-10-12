@@ -19,8 +19,8 @@ export const LogoWithTheme = () => {
       <Link href={"/"} className="relative w-100%  h-[1.875rem] ">
         <NextImage
           imageUrl="/img/LOGO-ABERTALIGHT.png"
-          altImage="Logo da Biomob"
-          ariaLabel="Logo da Biomob"
+          altImage="Logo da PedroRabelais"
+          ariaLabel="Logo da PedroRabelais"
           sizes="100vw"
           className="w-[10.25rem]"
         />
@@ -33,16 +33,16 @@ export const LogoWithTheme = () => {
       {theme == "light" ? (
         <NextImage
           imageUrl="/img/LOGO-ABERTALIGHT.png"
-          altImage="Logo da Biomob"
-          ariaLabel="Logo da Biomob"
+          altImage="Logo da PedroRabelais"
+          ariaLabel="Logo da PedroRabelais"
           sizes="100vw"
           className="w-[10.25rem]"
         />
       ) : (
         <NextImage
           imageUrl="/img/LOGO-ABERTA.png"
-          altImage="Logo da Biomob"
-          ariaLabel="Logo da Biomob"
+          altImage="Logo da PedroRabelais"
+          ariaLabel="Logo da PedroRabelais"
           sizes="100vw"
           className="w-[10.25rem]"
         />

@@ -1,10 +1,21 @@
 "use client";
 import React from "react";
 import { HeroParallax } from "../../../../components/ui/hero-parallax";
+import { motion } from "motion/react";
 
 export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+      className="w-full mb-20"
+    >
+      <HeroParallax products={products} />;
+    </motion.div>
+  );
 }
+
 export const products = [
   {
     id: 1,
