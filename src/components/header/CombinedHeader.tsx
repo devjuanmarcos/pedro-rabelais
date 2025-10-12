@@ -6,6 +6,7 @@ import Image from "next/image";
 import BarToolsSkeleton from "../ui/BarToolsSkeleton";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
   const [dropdownVisible, setDropdownVisible] = React.useState(false);
@@ -60,16 +61,26 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
           height={58}
         />
 
-        <div className="flex justify-center gap-4 w-full">
-          <span className="body-callout-medium">Início</span>
+        <div className="flex justify-center items-center gap-4 w-full">
+          <Link href={"/"} className="body-callout-medium">
+            Início
+          </Link>
           <span>•</span>
-          <span className="body-callout-medium">Projetos</span>
+          <Link href={"/projetos"} className="body-callout-medium">
+            Projetos
+          </Link>
           <span>•</span>
-          <span className="body-callout-medium">Galeria</span>
+          <Link href={"/galeria"} className="body-callout-medium">
+            Galeria
+          </Link>
           <span>•</span>
-          <span className="body-callout-medium">Sobre nós</span>
+          <Link href={"/sobre-nos"} className="body-callout-medium">
+            Sobre nós
+          </Link>
           <span>•</span>
-          <span className="body-callout-medium">Contato</span>
+          <Link href={"/contato"} className="body-callout-medium">
+            Contato
+          </Link>
         </div>
 
         <SwitchWithIcon />

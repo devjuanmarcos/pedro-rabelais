@@ -1,10 +1,8 @@
 "use client";
-import React from "react";
-import { HeroParallax } from "../ui/hero-parallax";
 
-export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
-}
+import { AcervoMosaicCard } from "@/components/ui/acervo-mosaic";
+import { Button } from "@/components/ui/button";
+
 export const products = [
   {
     id: 1,
@@ -100,3 +98,19 @@ export const products = [
     thumbnail: "/img/parallax/PEDRO RABELAIS PAISAGISMO - PF (1)-23.png",
   },
 ];
+
+export const GalleryPage = () => {
+  return (
+    <div className="flex flex-col gap-48 justify-center items-center py-48 ">
+      <div className="flex flex-col items-center justify-center gap-2 text-center">
+        <h1 className="display-01">Nossa galeria</h1>
+        <span>
+          Explore nosso acervo de imagens, projetos e inspirações. Esta galeria reúne ambientes, detalhes e composições
+          que traduzem nossa paixão pelo paisagismo e arquitetura de interiores.
+        </span>
+        <Button className="mt-2">Quero entrar em contato</Button>
+      </div>
+      <AcervoMosaicCard images={products} />
+    </div>
+  );
+};

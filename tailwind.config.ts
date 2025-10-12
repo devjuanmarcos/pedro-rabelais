@@ -134,7 +134,7 @@ const config: Config = {
             border: "1px solid white",
           },
         },
-        ".display-01": { fontWeight: "700", fontSize: "4.5rem" },
+        ".display-01": { fontWeight: "500", fontSize: "4.5rem", lineHeight: "1" },
         ".display-02": { fontWeight: "700", fontSize: "4rem" },
         ".heading-01": { fontWeight: "700", fontSize: "3.5rem" },
         ".heading-02-bold": { fontWeight: "700", fontSize: "3rem" },

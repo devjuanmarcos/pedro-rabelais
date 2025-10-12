@@ -9,10 +9,10 @@
   }
 
   * {
-    --brand-primary-dark: 358, 83%, 33%;
-    --brand-primary-mid: 358, 77%, 49%;
-    --brand-primary-light: 357, 84%, 67%;
-    --brand-primary-lightest: 0, 100%, 92%;
+    --brand-primary-dark: 60, 19%, 23%;
+    --brand-primary-mid: 60, 20%, 36%;
+    --brand-primary-light: 60, 19%, 49%;
+    --brand-primary-lightest: 60, 100%, 94%;
 
     --brand-secondary-dark: 274, 37%, 32%;
     --brand-secondary-mid: 275, 37%, 50%;
