@@ -18,7 +18,7 @@ export const Footer = () => {
         height={127}
         quality={100}
       />
-      <div className="flex gap-12 text-primary-foreground">
+      <div className="flex gap-12 flex-wrap justify-center text-primary-foreground">
         <span className="body-callout">Início</span>
         <span className="body-callout">Sobre</span>
         <span className="body-callout">Projetos</span>
@@ -26,7 +26,7 @@ export const Footer = () => {
         <span className="body-callout">Contato</span>
       </div>
 
-      <div className="flex gap-12">
+      <div className="flex gap-12 flex-wrap justify-center">
         <Link href="https://www.instagram.com/PedroRabelaisguia/" target="_blank">
           <IoLogoInstagram className="text-lg text-primary-foreground" />
         </Link>
@@ -46,7 +46,7 @@ export const Footer = () => {
 
       <Separator className="w-full" />
 
-      <span className="body-paragraph text-primary-foreground">
+      <span className="body-paragraph text-primary-foreground text-center">
         Combinamos tradição e paixão, cada projeto reflete nosso compromisso com um futuro mais harmonioso e
         sustentável.
       </span>

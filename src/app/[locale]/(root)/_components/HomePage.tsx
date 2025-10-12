@@ -11,7 +11,7 @@ export function HeroParallaxDemo() {
       transition={{ duration: 0.5, delay: 0.4 }}
       className="w-full mb-20"
     >
-      <HeroParallax products={products} />;
+      <HeroParallax products={products} />
     </motion.div>
   );
 }
