@@ -7,7 +7,7 @@ import BarToolsSkeleton from "../ui/BarToolsSkeleton";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
   const [dropdownVisible, setDropdownVisible] = React.useState(false);
@@ -15,6 +15,7 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
   const sidebarRef = React.useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = React.useState<boolean>(false);
+  const [sheetOpen, setSheetOpen] = React.useState<boolean>(false);
   const { theme, resolvedTheme } = useTheme();
 
   React.useEffect(() => {
@@ -41,27 +42,59 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
     return <BarToolsSkeleton />;
   }
 
-  const NavLinks = ({ isMobile = false }: { isMobile?: boolean }) => (
+  const NavLinks = ({ isMobile = false, closeSheet = () => {} }: { isMobile?: boolean; closeSheet?: () => void }) => (
     <>
-      <Link href={"/"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
-        Início
-      </Link>
-      {!isMobile && <span className="text-muted-foreground">•</span>}
-      <Link href={"/projetos"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
-        Projetos
-      </Link>
-      {!isMobile && <span className="text-muted-foreground">•</span>}
-      <Link href={"/galeria"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
-        Galeria
-      </Link>
-      {!isMobile && <span className="text-muted-foreground">•</span>}
-      <Link href={"/sobre-nos"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
-        Sobre nós
-      </Link>
-      {!isMobile && <span className="text-muted-foreground">•</span>}
-      <Link href={"/contato"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
-        Contato
-      </Link>
+      {isMobile ? (
+        <>
+          <SheetClose asChild>
+            <Link href={"/"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
+              Início
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href={"/projetos"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
+              Projetos
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href={"/galeria"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
+              Galeria
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href={"/sobre-nos"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
+              Sobre nós
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href={"/contato"} className={`body-callout-medium ${isMobile ? "text-lg py-2" : ""}`}>
+              Contato
+            </Link>
+          </SheetClose>
+        </>
+      ) : (
+        <>
+          <Link href={"/"} className="body-callout-medium">
+            Início
+          </Link>
+          <span className="text-muted-foreground">•</span>
+          <Link href={"/projetos"} className="body-callout-medium">
+            Projetos
+          </Link>
+          <span className="text-muted-foreground">•</span>
+          <Link href={"/galeria"} className="body-callout-medium">
+            Galeria
+          </Link>
+          <span className="text-muted-foreground">•</span>
+          <Link href={"/sobre-nos"} className="body-callout-medium">
+            Sobre nós
+          </Link>
+          <span className="text-muted-foreground">•</span>
+          <Link href={"/contato"} className="body-callout-medium">
+            Contato
+          </Link>
+        </>
+      )}
     </>
   );
 
@@ -117,13 +150,13 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
 
         {/* Menu hamburger totalmente à direita para telas menores que lg */}
         <div className="lg:hidden absolute right-4">
-          <Sheet>
+          <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger aria-label="Menu">
               <Menu className="w-6 h-6" />
             </SheetTrigger>
             <SheetContent>
               <div className="flex flex-col space-y-6 mt-10">
-                <NavLinks isMobile={true} />
+                <NavLinks isMobile={true} closeSheet={() => setSheetOpen(false)} />
                 <div className="pt-4">
                   <h3 className="mb-2 text-sm font-medium text-muted-foreground">Tema</h3>
                   <SwitchWithIcon />
