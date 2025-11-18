@@ -1,28 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
-import { cn } from "@/lib/utils";
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Card = React.memo(({ card }: { card: Card }) => (
-  <div className="w-full h-full aspect-video relative group/card">
-    <a href={card.link} className="block">
-      <Image
-        src={card.src}
-        alt={card.title}
-        height={1200}
-        width={1200}
-        className="rounded-lg w-full h-full object-cover aspect-video"
-      />
-    </a>
-    {/* Overlay com o mesmo efeito do hero-parallax */}
+  <Link href={card.link} className="w-full h-full aspect-video relative group/card">
+    <Image
+      src={card.src}
+      alt={card.title}
+      height={2000}
+      width={2000}
+      quality={100}
+      priority
+      className="rounded-lg w-full h-full object-cover aspect-video"
+    />
     <div className="absolute inset-0 h-full w-full opacity-0 group-hover/card:opacity-70 bg-white dark:bg-black transition-opacity duration-1000 ease-in-out pointer-events-none rounded-lg"></div>
     <div className="absolute inset-0 flex items-center justify-center">
       <h2 className="opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 ease-in-out heading-02 dark:text-white text-black px-6 text-center">
         {card.title}
       </h2>
     </div>
-  </div>
+  </Link>
 ));
 
 Card.displayName = "Card";

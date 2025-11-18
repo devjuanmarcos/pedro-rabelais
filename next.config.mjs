@@ -37,7 +37,12 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-    domains: ["i.ytimg.com", "PedroRabelaistinastorage.blob.core.windows.net", "img.youtube.com"],
+    domains: [
+      "i.ytimg.com",
+      "PedroRabelaistinastorage.blob.core.windows.net",
+      "img.youtube.com",
+      "storage.googleapis.com",
+    ],
   },
 };
 

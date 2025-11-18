@@ -10,15 +10,15 @@ import { Separator } from "../ui/separator";
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-primary gap-10 m-auto py-[4rem]">
+    <div className="flex flex-col justify-center items-center gap-10 m-auto py-[4rem]">
       <Image
-        src={"/img/logo-principal-branca-vertical.png"}
-        alt="Logo principal branca vertical"
-        width={189}
-        height={127}
+        src={"/img/logo-principal-preta-horizontal.png"}
+        alt="Logo principal preta horizontal"
+        width={219}
+        height={48}
         quality={100}
       />
-      <div className="flex gap-12 flex-wrap justify-center text-primary-foreground">
+      <div className="flex gap-12 flex-wrap justify-center text-foreground">
         <span className="body-callout">Início</span>
         <span className="body-callout">Sobre</span>
         <span className="body-callout">Projetos</span>
@@ -28,25 +28,25 @@ export const Footer = () => {
 
       <div className="flex gap-12 flex-wrap justify-center">
         <Link href="https://www.instagram.com/PedroRabelaisguia/" target="_blank">
-          <IoLogoInstagram className="text-lg text-primary-foreground" />
+          <IoLogoInstagram className="text-lg text-foreground" />
         </Link>
 
         <Link href="https://www.linkedin.com/company/PedroRabelais/" target="_blank">
-          <FaLinkedinIn className="text-lg text-primary-foreground" />
+          <FaLinkedinIn className="text-lg text-foreground" />
         </Link>
 
         <Link href="https://pt-br.facebook.com/PedroRabelaisguia/" target="_blank">
-          <FaFacebookF className="text-lg text-primary-foreground" />
+          <FaFacebookF className="text-lg text-foreground" />
         </Link>
 
         <Link href="https://www.youtube.com/@PedroRabelaisguia" target="_blank">
-          <FaYoutube className="text-lg text-primary-foreground" />
+          <FaYoutube className="text-lg text-foreground" />
         </Link>
       </div>
 
       <Separator className="w-full" />
 
-      <span className="body-paragraph text-primary-foreground text-center">
+      <span className="body-paragraph text-foreground text-center">
         Combinamos tradição e paixão, cada projeto reflete nosso compromisso com um futuro mais harmonioso e
         sustentável.
       </span>

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import SwitchWithIcon from "../ui/switchWithIcon";
 import Image from "next/image";
 import BarToolsSkeleton from "../ui/BarToolsSkeleton";
 import Link from "next/link";
@@ -100,21 +99,21 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col bg-background">
-      <div className="relative flex items-center w-full px-4 py-2 h-10">
+      <div className="relative flex items-center w-full px-[4.5rem] py-2 h-10">
         {/* Layout para telas grandes (>= lg) */}
-        <div className="hidden lg:block absolute left-4">
+        <div className="hidden lg:block absolute left-[4.5rem]">
           <Link href="/">
             <Image
               src={
                 resolvedTheme === "dark"
-                  ? "/img/logo-principal-branca-horizontal.png"
-                  : "/img/logo-principal-preta-horizontal.png"
+                  ? "/img/logo-principal-preta-horizontal 1.png"
+                  : "/img/logo-principal-preta-horizontal 1.png"
               }
               alt={"Logo Pedro Rabelais"}
               aria-label={"Logo Pedro Rabelais"}
               sizes="100vw"
-              width={137}
-              height={58}
+              width={98}
+              height={30}
             />
           </Link>
         </div>
@@ -122,11 +121,6 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
         {/* Menu de navegação para telas grandes */}
         <div className="hidden lg:flex justify-center items-center gap-4 w-full mx-auto">
           <NavLinks />
-        </div>
-
-        {/* Switch de tema para telas grandes */}
-        <div className="hidden lg:block absolute right-4">
-          <SwitchWithIcon />
         </div>
 
         {/* Layout para telas pequenas (< lg) */}
@@ -157,10 +151,6 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
             <SheetContent>
               <div className="flex flex-col space-y-6 mt-10">
                 <NavLinks isMobile={true} closeSheet={() => setSheetOpen(false)} />
-                <div className="pt-4">
-                  <h3 className="mb-2 text-sm font-medium text-muted-foreground">Tema</h3>
-                  <SwitchWithIcon />
-                </div>
               </div>
             </SheetContent>
           </Sheet>
