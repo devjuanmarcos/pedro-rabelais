@@ -10,7 +10,7 @@ export function AboutPage() {
   return (
     <div className="relative mx-auto my-10 flex  flex-col items-center justify-center">
       <div className="px-4 pt-10 md:pt-20 max-w-7xl">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center display-01 ">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center md:display-01 heading-03 ">
           {"Conheça nossa nossa história".split(" ").map((word, index) => (
             <motion.span
               key={index}
@@ -66,6 +66,50 @@ export function AboutPage() {
           <Link className={buttonVariants({ variant: "default" })} href="/contato">
             Quero entrar em contato
           </Link>
+        </motion.div>
+
+        <Separator className="bg-primary mt-20" />
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 1.2,
+          }}
+          className="relative z-10 mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        >
+          <div className="relative w-full h-full min-h-[500px]">
+            <img src="/img/pedro01.jpg" alt="Pedro Rabelais" className="w-full h-full object-cover rounded-lg" />
+          </div>
+          <div className="flex flex-col gap-6">
+            <div className="text-6xl md:text-8xl">"</div>
+            <p className="body-paragraph">
+              Fundado há cinco anos, nosso escritório é a expressão de uma trajetória que começou muito antes. Nascido
+              em meio à criatividade e ao design de uma família de arquitetos, Pedro descobriu sua paixão pelo
+              paisagismo ainda jovem, iniciando sua jornada na área em 2007.
+            </p>
+            <p className="body-paragraph">
+              Mais do que estética, o paisagismo é, para nós, uma necessidade vital. Ele conecta a natureza ao
+              cotidiano, promove o bem-estar e cria espaços que enriquecem as experiências humanas. Nossa missão é
+              traduzir essa visão em projetos autorais que respeitam as raízes culturais e ambientais, ao mesmo tempo em
+              que inovam na criação de cenários vivos e integrados.
+            </p>
+            <p className="body-paragraph">
+              Atuamos em projetos residenciais, comerciais e institucionais, oferecendo soluções que atendem a
+              diferentes ambientes e demandas em diversas regiões do país.
+            </p>
+            <p className="body-paragraph">
+              Combinando tradição e paixão, cada projeto reflete nosso compromisso com um futuro mais harmonioso e
+              sustentável.
+            </p>
+          </div>
         </motion.div>
 
         <Separator className="bg-primary mt-20" />

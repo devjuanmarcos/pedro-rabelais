@@ -14,7 +14,7 @@ export const GalleryPage = () => {
     <div className="flex flex-col px-4">
       <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
         <div className="px-4 py-10 md:py-20">
-          <h1 className="relative z-10 mx-auto max-w-4xl text-center display-01 ">
+          <h1 className="relative z-10 mx-auto max-w-4xl text-center md:display-01 heading-03 ">
             {"Nossa galeria".split(" ").map((word, index) => (
               <motion.span
                 key={index}

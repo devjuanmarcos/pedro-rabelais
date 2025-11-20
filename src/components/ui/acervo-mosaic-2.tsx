@@ -34,7 +34,7 @@ export const AcervoMosaicCardType2 = ({ images }: { images: string[] }) => {
       {imageGroups.map((group, groupIndex) => (
         <React.Fragment key={`group-${groupIndex}`}>
           {/* Primeira linha - 3 colunas */}
-          <div className="grid grid-cols-3 gap-1">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
             {group.slice(0, 3).map((image: any) => (
               <div
                 key={image.id || image}
@@ -58,7 +58,7 @@ export const AcervoMosaicCardType2 = ({ images }: { images: string[] }) => {
 
           {/* Segunda linha - 2 colunas (se houver imagens suficientes) */}
           {group.length > 3 && (
-            <div className="grid grid-cols-2 gap-1">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
               {group.slice(3).map((image: any) => (
                 <div
                   key={image.id}

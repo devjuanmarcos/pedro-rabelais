@@ -37,7 +37,7 @@ export function ContactPage() {
   return (
     <div className="relative mx-auto my-10 flex flex-col items-center justify-center">
       <div className="px-4 pt-10 md:pt-20 max-w-7xl">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center display-01">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center md:display-01 heading-03">
           {"Entre em contato".split(" ").map((word, index) => (
             <motion.span
               key={index}

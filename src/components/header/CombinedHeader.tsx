@@ -125,14 +125,10 @@ export const CombinedHeader = ({ locale }: Readonly<{ locale: string }>) => {
 
         {/* Layout para telas pequenas (< lg) */}
         {/* Logo centralizada em telas pequenas */}
-        <div className="lg:hidden flex justify-center w-full">
+        <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
           <Link href="/">
             <Image
-              src={
-                resolvedTheme === "dark"
-                  ? "/img/logo-principal-branca-horizontal.png"
-                  : "/img/logo-principal-preta-horizontal.png"
-              }
+              src="/img/logo-principal-preta-horizontal.png"
               alt={"Logo Pedro Rabelais"}
               aria-label={"Logo Pedro Rabelais"}
               sizes="100vw"

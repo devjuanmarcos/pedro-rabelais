@@ -143,7 +143,7 @@ const config: Config = {
         ".heading-02-light": { fontWeight: "300", fontSize: "3rem" },
         ".heading-03-bold": { fontWeight: "700", fontSize: "2rem" },
         ".heading-03-medium": { fontWeight: "500", fontSize: "2rem" },
-        ".heading-03": { fontWeight: "500", fontSize: "2rem" },
+        ".heading-03": { fontWeight: "500", fontSize: "2rem", lineHeight: "1" },
         ".heading-04-bold": { fontWeight: "700", fontSize: "1.75rem" },
         ".heading-04-medium": { fontWeight: "500", fontSize: "1.75rem" },
         ".heading-04": { fontWeight: "500", fontSize: "1.75rem" },

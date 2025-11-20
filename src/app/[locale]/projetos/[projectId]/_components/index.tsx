@@ -14,8 +14,8 @@ export const ProjectsPage = () => {
 
   if (project) {
     return (
-      <section className="flex flex-col md:px-8 ">
-        <div className="flex gap-8 items-center py-10 md:py-20">
+      <section className="flex flex-col px-4 md:px-8 py-20 ">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 items-center lg:pb-20 ">
           <Image
             src={project.mainImage}
             alt={`${project.title} main image`}
