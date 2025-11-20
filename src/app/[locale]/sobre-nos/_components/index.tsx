@@ -89,7 +89,7 @@ export function AboutPage() {
             <img src="/img/pedro01.jpg" alt="Pedro Rabelais" className="w-full h-full object-cover rounded-lg" />
           </div>
           <div className="flex flex-col gap-6">
-            <div className="text-6xl md:text-8xl">"</div>
+            <div className="text-6xl md:text-8xl">&quot;</div>
             <p className="body-paragraph">
               Fundado há cinco anos, nosso escritório é a expressão de uma trajetória que começou muito antes. Nascido
               em meio à criatividade e ao design de uma família de arquitetos, Pedro descobriu sua paixão pelo
