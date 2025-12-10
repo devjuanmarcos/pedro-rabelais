@@ -33,18 +33,18 @@ type Card = {
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {
-  const firstRow = cards.slice(0, 2);
-  const secondRow = cards.slice(2, 4);
-  const thirdRow = cards.slice(4, 5);
+  // const firstRow = cards.slice(0, 2);
+  // const secondRow = cards.slice(2, 4);
+  // const thirdRow = cards.slice(4, 5);
 
   return (
     <div className="flex flex-col gap-10 w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10  mx-auto md:px-8 w-full">
-        {firstRow.map((card, index) => (
+        {cards.map((card, index) => (
           <Card key={card.title} card={card} />
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10  mx-auto md:px-8 w-full">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10  mx-auto md:px-8 w-full">
         {secondRow.map((card, index) => (
           <Card key={card.title} card={card} />
         ))}
@@ -53,7 +53,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
         {thirdRow.map((card, index) => (
           <Card key={card.title} card={card} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -91,23 +91,23 @@ export function AboutPage() {
           <div className="flex flex-col gap-6">
             <div className="text-6xl md:text-8xl">&quot;</div>
             <p className="body-paragraph">
-              Fundado há cinco anos, nosso escritório é a expressão de uma trajetória que começou muito antes. Nascido
-              em meio à criatividade e ao design de uma família de arquitetos, Pedro descobriu sua paixão pelo
-              paisagismo ainda jovem, iniciando sua jornada na área em 2007.
+              O Pedro cresceu cercado por arquitetura, plantas e histórias de família que sempre apontaram na mesma
+              direção: a natureza como parte da vida cotidiana. O escritório nasceu desse olhar sensível e da vontade de
+              criar jardins que protegem, acolhem e transformam a relação das pessoas com suas casas.
             </p>
             <p className="body-paragraph">
-              Mais do que estética, o paisagismo é, para nós, uma necessidade vital. Ele conecta a natureza ao
-              cotidiano, promove o bem-estar e cria espaços que enriquecem as experiências humanas. Nossa missão é
-              traduzir essa visão em projetos autorais que respeitam as raízes culturais e ambientais, ao mesmo tempo em
-              que inovam na criação de cenários vivos e integrados.
+              Com uma linguagem estética tropical e foco em vegetação de fácil manutenção, os projetos são desenvolvidos
+              para durar, acompanhar o tempo, mudar com as estações e manter a casa sempre viva. Os jardins são
+              desenhados como pequenos ecossistemas: convidativos, funcionais e integrados ao entorno.
             </p>
             <p className="body-paragraph">
-              Atuamos em projetos residenciais, comerciais e institucionais, oferecendo soluções que atendem a
-              diferentes ambientes e demandas em diversas regiões do país.
+              O que também diferencia o Rabelais é o jeito de trabalhar. O atendimento é próximo, cuidadoso, para que o
+              cliente não tenha preocupações. Do estudo inicial à entrega final — incluindo seleção das espécies, mão de
+              obra, iluminação e acompanhamento pós-implantação — tudo é conduzido de forma completa e transparente.
             </p>
             <p className="body-paragraph">
-              Combinando tradição e paixão, cada projeto reflete nosso compromisso com um futuro mais harmonioso e
-              sustentável.
+              A missão é simples: levar mais verde para perto da vida das pessoas. Criar jardins que tragam leveza,
+              tranquilidade e a sensação de que a casa, finalmente, ficou pronta.
             </p>
           </div>
         </motion.div>

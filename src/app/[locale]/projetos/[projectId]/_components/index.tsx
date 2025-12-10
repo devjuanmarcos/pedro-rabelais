@@ -15,19 +15,29 @@ export const ProjectsPage = () => {
   if (project) {
     return (
       <section className="flex flex-col px-4 md:px-8 py-20 ">
-        <div className="flex flex-col-reverse lg:flex-row gap-8 items-center lg:pb-20 ">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-5 gap-8 items-center lg:pb-20 ">
           <Image
             src={project.mainImage}
             alt={`${project.title} main image`}
-            height={300}
-            width={600}
+            height={1200}
+            width={2400}
             quality={100}
             priority
-            className="rounded-lg w-full h-full object-cover aspect-video"
+            className="rounded-lg w-full h-full object-cover aspect-video lg:col-span-3"
           />
-          <div className="flex flex-col gap-3">
-            <span className="display-01">{project.title}</span>
-            <span className="body-paragraph-medium">{project.Description}</span>
+          <div className="flex flex-col gap-3 lg:col-span-2">
+            <span className="display-01">{project.title_extended || project.title}</span>
+            <div className="flex flex-col gap-3">
+              {project.Description && project.Description.length > 0 ? (
+                project.Description.map((paragraph, index) => (
+                  <span key={index} className="body-paragraph-medium">
+                    {paragraph}
+                  </span>
+                ))
+              ) : (
+                <span className="body-paragraph-medium"></span>
+              )}
+            </div>
             <Link className={buttonVariants({ variant: "default" }) + " mt-5"} href="/contato">
               Quero entrar em contato
             </Link>

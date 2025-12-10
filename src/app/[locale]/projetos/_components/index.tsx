@@ -33,6 +33,26 @@ export function FocusCardsDemo() {
       src: "https://storage.googleapis.com/portal_cst_comunidade/testes/Cururu%20%2B%20Rabelais%20Paisagismo-20251117T224437Z-1-001/Cururu%20%2B%20Rabelais%20Paisagismo/FOTOS%20BAIXADAS/C%C3%B3pia%20de%20LS25007A%20(1).jpg",
       link: "/projetos/casa_cururu",
     },
+    {
+      title: "Cobertura Copacabana",
+      src: "https://storage.googleapis.com/portal_cst_comunidade/testes/COBERTURA COPACABANA/AdobeBridgeBatchRenameTemp3_DSF1129.jpg",
+      link: "/projetos/cobertura_copacabana",
+    },
+    {
+      title: "Quinta do Lago",
+      src: "https://storage.googleapis.com/portal_cst_comunidade/testes/QUINTA DO LAGO/WEB_MG_7498.jpg",
+      link: "/projetos/quinta_do_lago",
+    },
+    {
+      title: "Casacor RJ 2023",
+      src: "https://storage.googleapis.com/portal_cst_comunidade/testes/CASACORRJ2023/WhatsApp Image 2024-09-05 at 05.43.57.jpeg",
+      link: "/projetos/casacor_rj_2023",
+    },
+    {
+      title: "Casacor RJ 2024",
+      src: "https://storage.googleapis.com/portal_cst_comunidade/testes/CASACORRJ2024/WhatsApp Image 2025-12-08 at 21.16.55 (1).jpeg",
+      link: "/projetos/casacor_rj_2024",
+    },
   ];
 
   return <FocusCards cards={cards} />;
